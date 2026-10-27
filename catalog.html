@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог гранітних пам'ятників — фото реальних робіт гранітної майстерні у Києві. Одинарні, подвійні, меморіальні комплекси.">
+  <title>Каталог пам'ятників — Гранітна Майстерня Київ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- HEADER -->
+  <header class="header scrolled" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-diamond"><span></span></div>
+        <div class="header__logo-text">
+          <span class="header__logo-name">Гранітна Майстерня</span>
+          <span class="header__logo-sub">виготовлення пам'ятників</span>
+        </div>
+      </a>
+
+      <nav class="header__nav" id="nav">
+        <a href="index.html" class="header__link">Головна</a>
+        <a href="index.html#services" class="header__link">Послуги</a>
+        <a href="index.html#contacts" class="header__link">Контакти</a>
+      </nav>
+
+      <a href="tel:+380XXXXXXXXX" class="header__phone">
+        <div class="header__phone-pulse"></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>+380 (XX) XXX-XX-XX</span>
+      </a>
+
+      <button class="header__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CATALOG HERO -->
+  <section class="cat-hero">
+    <div class="container">
+      <div class="cat-hero__inner">
+        <a href="index.html" class="cat-hero__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          На головну
+        </a>
+        <div class="section__tag">Портфоліо</div>
+        <h1 class="cat-hero__title">Каталог пам'ятників</h1>
+        <p class="cat-hero__text">Фото наших реальних робіт — <span id="totalCount">0</span> пам'ятників</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG GRID -->
+  <section class="cat-grid-section">
+    <div class="container">
+      <div class="cat-grid" id="catalogGrid">
+        <!-- Images loaded from catalog-data.js -->
+      </div>
+
+      <div class="cat-loading" id="catalogLoading">
+        <div class="cat-spinner"></div>
+        <p>Завантаження фото...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cat-cta section section--dark">
+    <div class="container" style="text-align: center;">
+      <div class="section__header">
+        <span class="section__tag">Замовити</span>
+        <h2 class="section__title">Сподобався пам'ятник?</h2>
+        <p class="section__subtitle">Зателефонуйте нам або залиште заявку — ми розрахуємо вартість та допоможемо з вибором</p>
+      </div>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="tel:+380XXXXXXXXX" class="btn btn--primary btn--glow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Зателефонувати
+        </a>
+        <a href="index.html#contacts" class="btn btn--outline">
+          Залишити заявку
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lbClose" aria-label="Закрити">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Попереднє">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Наступне">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <div class="lightbox__body">
+      <img src="" alt="" id="lbImg">
+      <div class="lightbox__counter" id="lbCounter"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="header__logo-diamond"><span></span></div>
+          <span class="footer__name">Гранітна Майстерня</span>
+          <p class="footer__desc">Виготовлення та встановлення гранітних пам'ятників у Києві та області з 2012 року.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Навігація</h4>
+          <a href="index.html">Головна</a>
+          <a href="index.html#services">Послуги</a>
+          <a href="index.html#contacts">Контакти</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Контакти</h4>
+          <a href="tel:+380XXXXXXXXX">+380 (XX) XXX-XX-XX</a>
+          <span>м. Київ, вул. Прикладна, 10</span>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Гранітна Майстерня. Усі права захищено.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Нагору">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/catalog-data.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>
